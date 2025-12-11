@@ -1,0 +1,16 @@
+/* Importa base */
+@forward "../scss/base/_variables";
+@use "../scss/base/_global";
+@use "../scss/base/_mixins";
+
+/* Componentes */
+@use "../scss/components/_header.scss";
+@use "../scss/components/_cards.scss";
+@use "../scss/components/_footer.scss";
+@use "../scss/components/_cart.scss";
+@use "../scss/components/sectors";
+
+/* Layout */
+@use "../scss/_main.scss";
+@use "../scss/pages/register"
+//@use "../scss/querys"

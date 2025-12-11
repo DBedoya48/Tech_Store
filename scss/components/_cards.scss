@@ -1,0 +1,100 @@
+@use "../base/variables";
+@use "../base/mixins";
+
+.card, .card2 {
+  @include mixins.cardMixin(variables.$fondoTarj1);
+  height: 400px;
+  overflow: hidden;
+  perspective: 1000px; // necesario para el giro 3D
+
+  // si es card2, mantiene tu fondo personalizado
+  &.card2 {
+    @include mixins.cardMixin(variables.$fondoTarj2);
+  }
+}
+
+// CONTENEDOR interno que rota
+.cardContenedor {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform .6s;
+  transform-style: preserve-3d;
+
+  // cuando la card tiene la clase .flipped, giramos
+  .card.flipped &,
+  .card2.flipped & {
+    transform: rotateY(180deg);
+  }
+}
+
+// Ambas caras de la tarjeta
+.tarjFrontal,
+.tarjPosterior {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; // clave para ocultar la cara trasera
+  top: 0;
+  left: 0;
+}
+
+// Cara trasera volteada
+.tarjPosterior {
+  transform: rotateY(180deg);
+}
+
+// Títulos de ambas variantes
+.card-title, .card2-title {
+  color: #e5e7eb;
+  font-size: 1.1rem;
+}
+
+.connection {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  padding: 25px 15px;
+
+  h2 {
+    grid-column: span 4;
+    text-align: center;
+    font-family: variables.$font-iceberg;
+  }
+}
+.card-price, .card2-price {
+  color: #3b82f6;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.card-btn, .card2-btn, .card-btn-flip {
+  @include mixins.botonCard;
+}
+
+.tarjPosterior {
+  transform: rotateY(180deg);
+}
+
+.tarjFrontal,
+.tarjPosterior {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;   // LOS BOTONES SIEMPRE ABAJO
+  align-items: center;
+}
+
+.tarjFrontal img,
+.tarjPosterior img {
+  width: 70%;
+  height: 180px;
+  object-fit: contain;
+}

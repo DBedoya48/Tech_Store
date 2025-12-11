@@ -1,0 +1,114 @@
+/* ================================
+   📱 1200px – Ajustes para pantallas medianas
+   ================================ */
+@media (max-width: 1200px) {
+  .connection {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  header {
+    background-size: 50% 100%, 50% 100%;
+  }
+}
+
+/* ================================
+   📱 992px – Tablets horizontales
+   ================================ */
+@media (max-width: 992px) {
+
+  /* Encabezado */
+  header {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    text-align: center;
+    padding-bottom: 10px;
+
+    nav {
+      justify-self: center;
+      grid-row: 3;
+    }
+
+    .logoEncabezado {
+      margin: 10px auto;
+    }
+  }
+
+  /* Cards */
+  .connection {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #cart {
+    width: 40vw;
+  }
+}
+
+/* ================================
+   📱 768px – Tablets verticales
+   ================================ */
+@media (max-width: 768px) {
+
+  /* Grid de productos */
+  .connection {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .tarjFrontal img,
+  .tarjPosterior img {
+    height: 150px;
+  }
+
+  /* Carrito */
+  #cart {
+    width: 55vw;
+    right: 10px;
+  }
+
+  .carritoDeCompras {
+    top: 110px;
+    right: 10px;
+  }
+}
+
+/* ================================
+   📱 576px – Celulares
+   ================================ */
+@media (max-width: 576px) {
+
+  /* Header */
+  header {
+    background-image: none;
+    padding: 10px 0;
+
+    nav a {
+      font-size: 0.9rem;
+      padding: 0 5px;
+    }
+  }
+
+  .slogan {
+    font-size: 1rem !important;
+  }
+
+  /* Grid */
+  .connection {
+    grid-template-columns: 1fr;
+  }
+
+  .card,
+  .card2 {
+    min-height: 350px;
+  }
+
+  /* Footer */
+  .futuristic-footer h2 {
+    font-size: 1.4rem;
+  }
+
+  /* Carrito */
+  #cart {
+    width: 75vw;
+    top: 150px;
+  }
+}

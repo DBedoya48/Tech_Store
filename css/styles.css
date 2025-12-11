@@ -1,0 +1,438 @@
+/* Importa base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(11, 36, 67);
+}
+
+/* Componentes */
+header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  align-items: center;
+  background-image: url(../images/fondo3.jpg), url(../images/fondo3_inverso.jpg);
+  background-repeat: no-repeat;
+  background-position: left center, right center;
+  background-size: 50% 100%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+header nav {
+  grid-row: 1/3;
+  grid-column: 3/3;
+  justify-self: end;
+}
+header nav a {
+  color: aquamarine;
+  padding: 0 10px;
+  position: relative;
+  text-decoration: none;
+  font-weight: 600;
+}
+header nav a:hover {
+  color: #00b4d8;
+}
+header nav a:hover::after {
+  width: 100%;
+}
+header nav a::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #00b4d8;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  transition: 0.3s;
+}
+header .logoEncabezado {
+  width: 70px;
+  border-radius: 20px;
+  box-shadow: aquamarine 3px 6px 5px;
+  position: sticky;
+  left: 20px;
+  margin: 30px;
+}
+header .slogan {
+  grid-column: 2/3;
+  text-align: center;
+  font-size: 1.3rem;
+  font-family: "Iceberg", sans-serif;
+  color: aquamarine;
+}
+
+.card, .card2 {
+  background: #020a15;
+  border: 1px solid #2a2f36;
+  border-radius: 14px;
+  color: #06eeee;
+  padding: 18px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  min-height: 400px;
+  position: relative;
+  perspective: 1000px;
+}
+.card:hover, .card2:hover {
+  border-color: #00ffff;
+  box-shadow: 0 0 18px #00ffff;
+}
+.card:hover img, .card2:hover img {
+  transform: scale(1.04);
+}
+.card, .card2 {
+  height: 400px;
+  overflow: hidden;
+  perspective: 1000px;
+}
+.card.card2, .card2.card2 {
+  background: rgb(13, 25, 44);
+  border: 1px solid #2a2f36;
+  border-radius: 14px;
+  color: #06eeee;
+  padding: 18px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  min-height: 400px;
+  position: relative;
+  perspective: 1000px;
+}
+.card.card2:hover, .card2.card2:hover {
+  border-color: #00ffff;
+  box-shadow: 0 0 18px #00ffff;
+}
+.card.card2:hover img, .card2.card2:hover img {
+  transform: scale(1.04);
+}
+
+.cardContenedor {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+.card.flipped .cardContenedor, .card2.flipped .cardContenedor {
+  transform: rotateY(180deg);
+}
+
+.tarjFrontal,
+.tarjPosterior {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  top: 0;
+  left: 0;
+}
+
+.tarjPosterior {
+  transform: rotateY(180deg);
+}
+
+.card-title, .card2-title {
+  color: #e5e7eb;
+  font-size: 1.1rem;
+}
+
+.connection {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  padding: 25px 15px;
+}
+.connection h2 {
+  grid-column: span 4;
+  text-align: center;
+  font-family: "Iceberg", sans-serif;
+}
+
+.card-price, .card2-price {
+  color: #3b82f6;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.card-btn, .card2-btn, .card-btn-flip {
+  background: #082554;
+  color: #00ffff;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: 0.3s;
+  margin: 10px 0;
+}
+.card-btn:hover, .card2-btn:hover, .card-btn-flip:hover {
+  background: #0f1939;
+  box-shadow: 0 0 6px rgba(59, 130, 246, 0.35);
+}
+
+.tarjPosterior {
+  transform: rotateY(180deg);
+}
+
+.tarjFrontal,
+.tarjPosterior {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tarjFrontal img,
+.tarjPosterior img {
+  width: 70%;
+  height: 180px;
+  object-fit: contain;
+}
+
+.futuristic-footer {
+  background: #0f0f1a;
+  color: #00ffff;
+  font-family: "Orbitron", sans-serif;
+  padding: 40px 20px;
+  text-align: center;
+  border-top: 2px solid #00ffff;
+}
+.futuristic-footer h2 {
+  font-size: 2em;
+  text-shadow: 0 0 10px #00ffff;
+}
+.futuristic-footer .socials {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+}
+.futuristic-footer .socials a {
+  color: #00ffff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.futuristic-footer .socials a:hover::after {
+  width: 100%;
+}
+.futuristic-footer .socials a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background: #00ffff;
+  width: 0%;
+  transition: 0.3s;
+}
+
+.carritoDeCompras {
+  position: fixed;
+  right: 20px;
+  top: 130px;
+  z-index: 999;
+}
+.carritoDeCompras.show {
+  display: block;
+}
+.carritoDeCompras li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.carritoDeCompras li button {
+  background: #ef4444;
+  border-radius: 4px;
+  padding: 2px 6px;
+}
+
+#cart-toggle {
+  border: none;
+  cursor: pointer;
+  width: 80px;
+  height: 80px;
+  z-index: 1000;
+  align-items: center;
+  background: transparent;
+}
+#cart-toggle img {
+  width: 100%;
+  object-fit: contain;
+}
+
+#cart.show {
+  display: block;
+}
+#cart {
+  position: fixed;
+  right: 20px;
+  top: 200px;
+  width: 30vw;
+  background: #11161d;
+  border: 1px solid #2a2f36;
+  padding: 15px;
+  border-radius: 12px;
+  display: none;
+  color: #e5e7eb;
+}
+#cart li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+#cart li button {
+  background: #be3939;
+  border-radius: 4px;
+  padding: 2px 6px;
+}
+
+.nuestrosServicios {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  margin: 0px 70px 25px 70px;
+}
+.nuestrosServicios .sector {
+  max-height: 500px;
+  align-content: center;
+  text-align: center;
+  color: aqua;
+  font-size: 1.8rem;
+}
+.nuestrosServicios .sector img {
+  height: 400px;
+  border-radius: 8px;
+}
+
+.redesSociales {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 150px;
+  width: 3.5rem;
+  height: auto;
+  background-color: var(--transparente);
+}
+
+.redesSociales img {
+  display: flex;
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: var(--transparente);
+}
+
+#loginForm {
+  width: 6rem;
+  height: 20rem;
+  padding: 70px;
+}
+
+/* Layout */
+main {
+  margin-top: 180px;
+}
+
+.form-container {
+  width: 420px;
+  margin: 40px auto;
+  background: transparent;
+  padding: 30px;
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.15);
+  animation: fadeIn 0.4s ease;
+  font-family: "Iceberg", sans-serif;
+  color: #03ffff;
+  text-shadow: 2px 2px 4px rgb(231, 8, 8);
+  font-size: 1rem;
+  text-align: center;
+}
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #03ffff;
+}
+
+.titulo {
+  text-align: center;
+  color: #03ffff;
+  text-shadow: 2px 2px 4px rgb(231, 8, 8);
+  font-size: 1.9rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+.input-group label {
+  margin-bottom: 5px;
+  font-size: 2rem;
+}
+.input-group input {
+  padding: 10px 12px;
+  background: #0d1117;
+  border: 1px solid #1e293b;
+  border-radius: 8px;
+  color: #e5e7eb;
+  font-size: 0.9rem;
+  outline: none;
+  transition: all 0.25s ease;
+}
+.input-group input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.35);
+}
+
+.form-btn {
+  width: 100%;
+  padding: 12px;
+  background: #3b82f6;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.form-btn:hover {
+  background: #2563eb;
+  box-shadow: 0 0 14px rgba(37, 99, 235, 0.5);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fondoRegistro {
+  background-image: url(../images/fondo_neon_azul.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.headerRegistro {
+  background: transparent;
+  padding: 20px;
+}
+
+/*# sourceMappingURL=styles.css.map */

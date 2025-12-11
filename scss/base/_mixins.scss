@@ -1,0 +1,43 @@
+@use "../base/variables";
+
+// Mixin base para tarjetas
+@mixin cardMixin($fondoCard) {
+  background: $fondoCard;
+  border: variables.$border-card;
+  border-radius: 14px;
+  color: variables.$neon1;
+  padding: 18px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  min-height: 400px;
+  position: relative;
+  perspective: 1000px;
+
+  &:hover {
+    border-color: #00ffff;
+    box-shadow: variables.$shadow-card;
+
+    img {
+      transform: scale(1.04);
+    }
+  }
+}
+
+// Botones de las tarjetas
+@mixin botonCard {
+  background: #082554;
+  color: #00ffff;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: 0.3s;
+  margin: 10px 0;
+
+  &:hover {
+    background: #0f1939;
+    box-shadow: 0 0 6px rgba(59, 130, 246, 0.35);
+  }
+}
