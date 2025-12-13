@@ -25,7 +25,7 @@ header {
   z-index: 1000;
 }
 header nav {
-  grid-row: 1/3;
+  grid-row: 3/3;
   grid-column: 3/3;
   justify-self: end;
 }
@@ -374,6 +374,18 @@ header .slogan {
 #loginForm button:hover {
   background: #2563eb;
   box-shadow: 0 0 14px rgba(37, 99, 235, 0.5);
+}
+
+.cerrarSesion {
+  height: 1.8rem;
+  color: rgb(4, 208, 212);
+  background: rgb(8, 8, 167);
+  border-radius: 3px;
+  padding: 4px 4px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 5;
 }
 
 /* Layout */

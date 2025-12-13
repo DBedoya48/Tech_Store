@@ -26,12 +26,16 @@ loginForm.addEventListener("submit", (e) => {
     
 
     // Redirecciones según rol
-    if (usuarioEncontrado.rol === "admin") {
-        window.location.href = "../pages/admin.html";
-    } else if (usuarioEncontrado.rol === "empleado") {
-        window.location.href = "../pages/empleado.html";
-    } else {
-        window.location.href = "../pages/comprador.html";
-    }
+switch (usuarioEncontrado.rol) {
+    case "admin":
+        window.location.href = "../pages/admin/index.html";
+        break;
+    case "empleado":
+        window.location.href = "../pages/empleados/index.html";
+        break;
+    case "comprador":
+        window.location.href = "../pages/compradores/index.html";
+        break;
+}
 });
 JSON.parse(localStorage.getItem("sesionActiva"));

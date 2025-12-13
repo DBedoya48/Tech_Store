@@ -4,29 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech Store</title>
-    <link rel="stylesheet" href="../css/styles.css"> 
+    <link rel="stylesheet" href="../../css/styles.css"> 
+    <link rel="scripts" href="../../scripts/scripts.js">
 </head>
 <body>
     <main>
         <header>
-            <a href="../pages/index.html">
-            <img class="logoEncabezado" src="../images/logo.png" alt="not found">
+            <a href="../../pages/index.html">
+            <img class="logoEncabezado" src="../../images/logo.png" alt="not found">
             </a>
             <nav>
-            <button onclick="logout()">cerrar sesión</button>
+            <button class="logout" onclick="logout()">cerrar sesión</button>
             </nav>
             <h1 class="slogan">SOLUCIONES EMPRESARIALES </h1>
         </header>
         <div class="carritoDeCompras">
             <button id="cart-toggle">
-            <img src="../images/6811628.png" alt="carrito de compras">
+            <img src="../../images/6811628.png" alt="carrito de compras">
             (<span id="cart-count">0</span>)
             </button>
             <div id="cart">
                 <h3>Carrito de Compras</h3>
                 <ul id="cart-items"></ul>
                 <p>Total: $<span id="cart-total">0.00</span></p>
-                <script src="../scripts/scripts.js"></script>
+                <script src="../../scripts/scripts.js"></script>
             </div>
         </div>
         <section class="connection">
@@ -35,7 +36,7 @@
             <div class="card">
                 <div class="cardContenedor">
                     <div class="tarjFrontal">
-                        <img src="../images/CableUTPCat5.png" alt="Producto 1">
+                        <img src="../../images/CableUTPCat5.png" alt="Producto 1">
                         <h3 class="card-title">Cable UTP categoría 5</h3>
                         <p class="card-desc">compra mínima 100 metros</p>
                         <span class="card-price">$58.000 cop</span>
@@ -43,7 +44,7 @@
                         <button class="card-btn" onclick="addToCart('UTP CAT 5', 58000, this.closest('.card').querySelector('img'))">Añadir al carrito</button>
                     </div>
                     <div class="tarjPosterior">
-                        <img src="../images/CableUTPCat5.png" alt="Producto 1">
+                        <img src="../../images/CableUTPCat5.png" alt="Producto 1">
                         <h3 class="card-title">Detalles Cable UTP cat5</h3>
                         <p class="card-desc">velocidad de transmisión 100mb/s</p>
                         <p class="card-desc">Frecyuencia 100MHz</p>
@@ -56,7 +57,7 @@
             <div class="card">
                 <div class="cardContenedor">          
                     <div class="tarjFrontal">
-                        <img src="../images/CableUTPCat6.png" alt="Producto 2">
+                        <img src="../../images/CableUTPCat6.png" alt="Producto 2">
                         <h3 class="card-title">Cable UTP categoría 6</h3>
                         <p class="card-desc">compra mínima 100 metros</p>
                         <span class="card-price">$75.000 cop</span>
@@ -64,7 +65,7 @@
                         <button class="card-btn" onclick="addToCart('UTP CAT 6', 75000, this.closest('.card').querySelector('img'))">Añadir al carrito</button>
                     </div>
                     <div class="tarjPosterior"> 
-                        <img src="../images/CableUTPCat6.png" alt="Producto 2">
+                        <img src="../../images/CableUTPCat6.png" alt="Producto 2">
                         <h3 class="card-title">Cable UTP categoría 6</h3>
                         <p class="card-desc">velocidad de transmisión 1gb/s</p>
                         <p class="card-desc">Frecyuencia 250MHz</p>
@@ -77,7 +78,7 @@
             <div class="card">
                 <div class="cardContenedor">
                     <div class="tarjFrontal">
-                        <img src="../images/CableUTPCat7.png" alt="Producto 3">
+                        <img src="../../images/CableUTPCat7.png" alt="Producto 3">
                         <h3 class="card-title">Cable UTP categoría 7</h3>
                         <p class="card-desc">compra mínima 100 metros</p>
                         <span class="card-price">$99.000 cop</span>
@@ -85,7 +86,7 @@
                         <button class="card-btn" onclick="addToCart('UTP CAT 7', 75000,  this.closest('.card').querySelector('img'))">Añadir al carrito</button>
                     </div>
                     <div class="tarjPosterior">
-                        <img src="../images/CableUTPCat7.png" alt="Producto 3">
+                        <img src="../../images/CableUTPCat7.png" alt="Producto 3">
                         <h3 class="card-title">Cable UTP categoría 7</h3>
                         <p class="card-desc">velocidad de transmisión 10gb/s</p>
                         <p class="card-desc">Frecyuencia 500MHz</p>
@@ -97,7 +98,7 @@
             <div class="card">
                 <div class="cardContenedor">
                     <div class="tarjFrontal">
-                        <img src="../images/cableUTPCat8.png" alt="Producto 4">
+                        <img src="../../images/cableUTPCat8.png" alt="Producto 4">
                         <h3 class="card-title">Cable UTP categoría 8</h3>
                         <p class="card-desc">compra mínima 100 metros</p>
                         <span class="card-price">$125.000 cop</span>
@@ -105,7 +106,7 @@
                         <button class="card-btn" onclick="addToCart('UTP CAT 8', 99000, this.closest('.card').querySelector('img'))">Añadir al carrito</button>
                     </div>
                     <div class="tarjPosterior">
-                        <img src="../images/cableUTPCat8.png" alt="Producto 4">
+                        <img src="../../images/cableUTPCat8.png" alt="Producto 4">
                         <h3 class="card-title">Cable UTP categoría 8</h3>
                         <p class="card-desc">velocidad de transmisión 10gb/s</p>
                         <p class="card-desc">Frecyuencia 1000MHz</p>
@@ -122,7 +123,7 @@
             <div class="card2">
                 <div class="cardContenedor">
                     <div class="tarjFrontal">
-                        <img src="../images/dielectrica.png" alt="Producto 1">
+                        <img src="../../images/dielectrica.png" alt="Producto 1">
                         <h3 class="card-title">Cable De Fibra Óptica Dieléctrica </h3>
                         <p class="card-desc">monomodo - multimodo</p>
                         <span class="card-price">$370.000 cop</span>
@@ -130,7 +131,7 @@
                         <button class="card-btn" onclick="addToCart('Fibra Óptica Dieléctrica', 370000, this.closest('.card2').querySelector('img'))">Añadir al carrito</button>
                     </div>
                     <div class="tarjPosterior">
-                        <img src="../images/dielectrica.png" alt="Producto 1">
+                        <img src="../../images/dielectrica.png" alt="Producto 1">
                         <h3 class="card-title">Detalles Cable Fibra Óptica Dieléctrica</h3>
                         <p class="card-desc">velocidad de transmisión 100gb/s</p>
                         <p class="card-desc">maxima velocidad  10gb/s a 300 metros</p>
@@ -143,7 +144,7 @@
             <div class="card2">
                 <div class="cardContenedor">            
                     <div class="tarjFrontal">
-                        <img src="../images/armada.png" alt="Producto 2">
+                        <img src="../../images/armada.png" alt="Producto 2">
                         <h3 class="card-title">Cable de Fibra Óptica armada</h3>
                         <p class="card-desc">compra mínima 100 metros</p>
                         <span class="card-price">$1.900.000 cop</span>
@@ -151,7 +152,7 @@
                         <button class="card-btn" onclick="addToCart('Fibra Óptica Armada', 1900000, this.closest('.card2').querySelector('img'))">Añadir al carrito</button>
                     </div>
                     <div class="tarjPosterior"> 
-                        <img src="../images/armada.png" alt="Producto 2">
+                        <img src="../../images/armada.png" alt="Producto 2">
                         <h3 class="card-title">Detalles Cable Fibra Óptica Armada</h3>
                         <p class="card-desc">Máxima velocidad 10gb/s a 300 metros</p>
                         <p class="card-desc">Máxima distancia 1gb/s a 1000 metros</p>
@@ -164,7 +165,7 @@
             <div class="card2">
                 <div class="cardContenedor">
                     <div class="tarjFrontal">
-                        <img src="../images/soportada.png" alt="Producto 3">
+                        <img src="../../images/soportada.png" alt="Producto 3">
                         <h3 class="card-title">Cable Fibra Óptica Auto Soportada</h3>
                         <p class="card-desc">compra mínima 100 metros</p>
                         <span class="card-price">$550.000 cop</span>
@@ -172,7 +173,7 @@
                         <button class="card-btn" onclick="addToCart('Fibra Óptica Soportada', 550000,  this.closest('.card2').querySelector('img'))">Añadir al carrito</button>
                     </div>
                     <div class="tarjPosterior">
-                        <img src="../images/soportada.png" alt="Producto 3">
+                        <img src="../../images/soportada.png" alt="Producto 3">
                         <h3 class="card-title">Cable Fibra Óptica Soportada</h3>
                         <p class="card-desc">Máxima Velocidad 1tb/s a 10 Kilómetros</p>
                         <p class="card-desc">Máxima distancia 100gb/s a 160 Kilómetros</p>
@@ -184,7 +185,7 @@
             <div class="card2">
                 <div class="cardContenedor">
                     <div class="tarjFrontal">
-                        <img src="../images/blindada.png" alt="Producto 3">
+                        <img src="../../images/blindada.png" alt="Producto 3">
                         <h3 class="card-title">Cable Fibra Óptica Auto Soportada</h3>
                         <p class="card-desc">compra mínima 100 metros</p>
                         <span class="card-price">$650.000 cop</span>
@@ -192,7 +193,7 @@
                         <button class="card-btn" onclick="addToCart('Fibra Óptica Soportada Blindada', 650000,  this.closest('.card2').querySelector('img'))">Añadir al carrito</button>
                     </div>
                     <div class="tarjPosterior">
-                        <img src="../images/blindada.png" alt="Producto 3">
+                        <img src="../../images/blindada.png" alt="Producto 3">
                         <h3 class="card-title">Cable Fibra Óptica Soportada</h3>
                         <p class="card-desc">Máxima Velocidad 1tb/s a 10 Kilómetros</p>
                         <p class="card-desc">Máxima distancia 100gb/s a 160 Kilómetros</p>

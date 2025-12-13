@@ -154,6 +154,6 @@ form.addEventListener("submit", (e) => {
 
 function logout() {
     localStorage.removeItem("sesionActiva");
-    window.location.href = "../pages/index.html";
+    window.location.href = "../index.html";
 }
 
