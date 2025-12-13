@@ -63,4 +63,13 @@ header {
     font-family: variables.$font-iceberg;
     color: aquamarine;
   }
+
+  p{
+    color: aqua;
+    font-size: 1.2rem;
+    position:fixed;
+    top:20px;
+    right: 150px;
+    text-shadow: blue 1px 2px 2px;
+  }
 }

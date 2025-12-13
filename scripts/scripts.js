@@ -157,3 +157,16 @@ function logout() {
     window.location.href = "../index.html";
 }
 
+//sript para el saludo en cada pagina
+
+function mostrarSaludo() {
+    const sesion = JSON.parse(localStorage.getItem("sesionActiva"));
+    if (!sesion) return;
+
+    const saludo = document.getElementById("saludo2");
+    if (saludo) {
+        saludo.textContent = `Bienvenido(a), ${sesion.usuario}`;
+    }
+}
+
+document.addEventListener("DOMContentLoaded", mostrarSaludo);

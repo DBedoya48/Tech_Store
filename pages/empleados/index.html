@@ -13,8 +13,11 @@
         <img class="logoEncabezado" src="../../images/logo.png" alt="not found">
         <h1 class="slogan">esta es la pagina de inicio de un empleado</h1>
         <nav>
+            <p id="saludo2"></p>
             <a href="../pages/enterprise.html">Configuracion</a>
-            <a href="./login.html">Cerrar sesion</a>
+            <script src="../../scripts/scripts.js"></script>
+            <button class="cerrarSesion" onclick="logout()">cerrar sesión</button>
+            <a href="../empleados/agregar.html">agregar productos</a>
         </nav>
     </header>
     <div class="redesSociales">
@@ -51,6 +54,7 @@
                 <p>&copy; 2025 TechCorp. Todos los derechos reservados.</p>
             </div>
         </footer>
+        <script>mostrarSaludo();</script>
     </main>
 </body>
 </html>
