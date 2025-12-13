@@ -14,6 +14,7 @@ loginForm.addEventListener("submit", (e) => {
 
     if (!usuarioEncontrado) {
         alert("Usuario o contraseña incorrectos");
+        loginForm.reset();
         return;
     }
 
@@ -21,6 +22,8 @@ loginForm.addEventListener("submit", (e) => {
     localStorage.setItem("sesionActiva", JSON.stringify(usuarioEncontrado));
 
     alert("Inicio de sesión exitoso");
+    loginForm.reset();
+    
 
     // Redirecciones según rol
     if (usuarioEncontrado.rol === "admin") {

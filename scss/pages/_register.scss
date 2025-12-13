@@ -46,11 +46,25 @@
     transition: all .25s ease;
 
     &:focus {
-      border-color: #3b82f6;
+      border-color: #1566e8;
       box-shadow: 0 0 10px rgba(59, 130, 246, .35);
     }
   }
+
+  select{
+    color: #03ffff;
+    height: 2rem;
+    background-color: #0f4cae;
+    border-color: #03ffff;
+    option{
+      font-family:'Times New Roman', Times, serif;
+      &:hover{
+      background:  #e300ae;
+      }
+    }
+  }
 }
+
 
 .form-btn {
   width: 100%;

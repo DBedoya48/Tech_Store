@@ -34,7 +34,45 @@
 }
 
 #loginForm{
-    width: 6rem;
-    height: 20rem;
-    padding: 70px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+
+  label {
+    margin-bottom: 5px;
+    font-size: 2rem;
+  }
+
+  input {
+    padding: 10px 12px;
+    background: #0d1117;
+    border: 1px solid #1e293b;
+    border-radius: 8px;
+    color: #0bc1ea;
+    font-size: 0.9rem;
+    outline: none;
+    transition: all .25s ease;
+
+    &:focus {
+      border-color: #1566e8;
+      box-shadow: 0 0 10px rgba(59, 130, 246, .35);
+    }
+  }
+  button{
+  width: 100%;
+  padding: 12px;
+  background: #3b82f6;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  border-radius: 8px;
+  margin: 30px 0 0 0;
+  cursor: pointer;
+  transition: .3s;
+
+    &:hover {
+        background: #2563eb;
+        box-shadow: 0 0 14px rgba(37, 99, 235, .5);
+    }
+  }
 }

@@ -146,3 +146,5 @@ if (!sesion || sesion.rol !== "admin") {
 /*
 
 npx http-server
+
+JSON.parse(localStorage.getItem("sesionActiva"));
