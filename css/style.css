@@ -9,10 +9,6 @@ body {
   background: rgb(11, 36, 67);
 }
 
-h1 {
-  color: aqua;
-}
-
 /* Componentes */
 header {
   display: grid;
@@ -388,6 +384,10 @@ header p {
   box-shadow: 0 0 14px rgba(37, 99, 235, 0.5);
 }
 
+.form-container {
+  height: 800px;
+}
+
 .cerrarSesion {
   height: 1.8rem;
   color: rgb(4, 208, 212);
@@ -436,10 +436,6 @@ main {
   flex-direction: column;
   margin-bottom: 18px;
 }
-.input-group:hover {
-  border-color: #00ffff;
-  box-shadow: 0 0 18px #00ffff;
-}
 .input-group label {
   margin-bottom: 5px;
   font-size: 2rem;
@@ -453,20 +449,10 @@ main {
   font-size: 0.9rem;
   outline: none;
   transition: all 0.25s ease;
-  margin: 12px 12px;
-  color: #05d3d3;
 }
 .input-group input:focus {
   border-color: #1566e8;
   box-shadow: 0 0 10px rgba(59, 130, 246, 0.35);
-}
-.input-group textarea {
-  background: #02317b;
-  height: 4rem;
-  color: #05d3d3;
-}
-.input-group textarea:focus {
-  border-style: none;
 }
 .input-group select {
   color: #03ffff;
@@ -519,4 +505,4 @@ main {
   padding: 20px;
 }
 
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=style.css.map */
