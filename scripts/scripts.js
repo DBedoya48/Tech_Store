@@ -240,11 +240,11 @@ form.addEventListener("submit", (e) => {
     window.location.href = "../pages/index.html";
 });
 
-function logout() {
+/*function logout() {
     localStorage.removeItem("sesionActiva");
     window.location.href = "../index.html";
 }
-
+*/
 //sript para el saludo en cada pagina
 
 function mostrarSaludo() {
@@ -258,3 +258,4 @@ function mostrarSaludo() {
 }
 
 document.addEventListener("DOMContentLoaded", mostrarSaludo);
+

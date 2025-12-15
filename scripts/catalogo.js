@@ -5,16 +5,17 @@ document.addEventListener("DOMContentLoaded", () => {
   // 🔐 Solo proteger si es página de empleado
   if (form) {
     const sesion = JSON.parse(localStorage.getItem("sesionActiva"));
-    if (!sesion || sesion.rol !== "empleado") {
+    /* if (!sesion || sesion.rol !== "empleado") {
       window.location.href = "../../index.html";
       return;
-    }
+    }*/
   }
 
   const contenedores = {
     cables: document.querySelector("#cables .connection"),
     sensores: document.querySelector("#sensores .connection"),
     camaras: document.querySelector("#camaras .connection")
+
   };
 
   // 1️⃣ Renderizar productos desde localStorage al cargar la página

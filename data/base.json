@@ -1,0 +1,63 @@
+{
+  "productos": [
+    {
+      "id": 1,
+      "titulo": "Cable UTP Cat5",
+      "precio": 58000,
+      "cantidad": 50,
+      "categoria": "cables",
+      "imagen": "../../images/CableUTPCat5.png",
+      "descripcion": "- velocidad de transmisión 100mb/s - Frecyuencia 100MHz - Potencia máxima POE 15.4W"
+    }
+    ,{
+      "id": 2,
+      "titulo": "Cable UTP Cat6",
+      "precio": 75000,
+      "cantidad": 42,
+      "categoria": "cables",
+      "imagen": "../../images/CableUTPCat6.png",
+      "descripcion": "- velocidad de transmisión 1gb/s - Frecyuencia 1000MHz - Potencia máxima POE 25.4W"
+    }
+    ,{
+      "id": 3,
+      "titulo": "Cable UTP Cat7",
+      "precio": 90000,
+      "cantidad": 35,
+      "categoria": "cables",
+      "imagen": "../../images/CableUTPCat7.png",
+      "descripcion": "- velocidad de transmisión 10gb/s - Frecyuencia 10000MHz - Potencia máxima POE 45.4W"
+    }
+    ,{
+      "id": 1,
+      "titulo": "Cable UTP Cat8",
+      "precio": 120000,
+      "cantidad": 60,
+      "categoria": "cables",
+      "imagen": "../../images/CableUTPCat8.png",
+      "descripcion": "- velocidad de transmisión 100gb/s - Frecyuencia 10000MHz - Potencia máxima POE 75.4W"
+    }
+  ],
+  "carrito": [
+
+  ],
+  "compras": [
+    
+  ],
+  "usuariosDB": [
+    {
+    "nombre": "Daniel Esteban Chiquito Bedoya",
+    "correo": "45esteban26@gmail.com",
+    "usuario": "Admin123",
+    "pass": "1",
+    "rol": "admin"
+    }
+    ,{
+    "nombre": "Harinder Arenas Buitrago",
+    "correo": "harin@gmail.com",
+    "usuario": "harin123",
+    "pass": "123",
+    "rol": "empleado"
+    }
+  ]
+
+}

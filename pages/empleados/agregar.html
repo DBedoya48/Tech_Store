@@ -15,6 +15,9 @@
     <button class="cerrarSesion" onclick="logout()">Cerrar sesión</button>
     <a href="../compradores/catalogo.html">Catálogo</a>
   </header>
+  <div class="importacion">
+    <button id="btn-import" class="btn-import">IMPORTAR BASE DE DATOS</button>
+  </div>
   <section class="form-container">
     <form class="input-group" id="productoForm">
       <input type="text" id="titulo" placeholder="Título" required>
@@ -28,10 +31,9 @@
   </section>
   <section class="connection" id="listaProductos"></section>
 </main>
-
-<script src="../../scripts/scripts.js"></script>
+<script src="../../scripts/baseloader.js"></script>
 <script src="../../scripts/catalogo.js"></script>
-<script>mostrarSaludo();</script>
+<script src="../../scripts/scripts.js"></script> 
 </body>
 </html>
 
