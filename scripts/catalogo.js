@@ -13,8 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const contenedores = {
     cables: document.querySelector("#cables .connection"),
-    sensores: document.querySelector("#sensores .connection"),
-    camaras: document.querySelector("#camaras .connection")
+    camaras: document.querySelector("#camaras .connection"),
+    hogar: document.querySelector("#hogar .connection")
 
   };
 
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const producto = {
         id: Date.now(),  // Usamos Date.now() como id único
-        titulo: titulo.value,
+        titulo: titulo.value, 
         precio: Number(precio.value),
         cantidad: Number(cantidad.value),
         categoria: categoria.value.toLowerCase(),
@@ -66,6 +66,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+function formatCOP(precio) {
+  return new Intl.NumberFormat('es-CO', {
+    style: 'currency',
+    currency: 'COP',
+    minimumFractionDigits: 0
+  }).format(precio);
+}
   // 3️⃣ Crear una card para el producto
   function crearCard(p) {
     const div = document.createElement("div");
@@ -76,15 +83,15 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="tarjFrontal">
           <img src="${p.imagen}">
           <h3>${p.titulo}</h3>
-          <p>$${p.precio}</p>
+          <p>${formatCOP(p.precio)}</p>
           <p class="stock">Stock: ${p.cantidad}</p>
-          <button class="add-cart-btn"data-id="${p.id}">Añadir al carrito</button>
-          <button class="card-btn-flip">Ver</button>
+          <button class="card-btn add-cart-btn"data-id="${p.id}">Añadir al carrito</button>
+          <button class="card-btn-flip">Ver detalles</button>
         </div>
 
         <div class="tarjPosterior">
+          <h3 class="card2-title">${p.titulo}</h3>
           <p>${p.descripcion}</p>
-          <p>Categoría: ${p.categoria}</p>
           <p class="stock">Stock: ${p.cantidad}</p>
           <button class="card-btn-flip">Volver</button>
         </div>

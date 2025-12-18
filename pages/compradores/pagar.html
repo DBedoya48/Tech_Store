@@ -10,48 +10,56 @@
 <body>
     <main>
         <header>
-            <a href="../admin/index.html">
+            <a href="../index.html">
             <img class="logoEncabezado" src="../../images/logo.png" alt="not found">
             </a>
             <h1 class="slogan">La solución a tus necesidades a un solo click </h1>
             <nav>
-                <a href="../empleados/index.html">inicio</a>
+                <a href="../empleados/agregar.html">Formulario de registro</a>
+                <a href="/pages/login.html">pedidos pendientes</a>
+                <a href="/pages/compradores/catalogo.html">catalogo</a>
             </nav>
         </header>
-        <div class="carritoDeCompras">
-            <button id="cart-toggle">
-            <img src="../../images/6811628.png" alt="carrito de compras">
-            (<span id="cart-count">0</span>)
-            </button>
-            <div id="cart">
-                <h3>Carrito de Compras</h3>
-                <ul id="cart-items"></ul>
-                <p>Total: $<span id="cart-total">0.00</span></p>
-                <a href="../compradores/resumen.html">
-                <button id="btnResumen" class="card-btn">Pagar</button>
-                </a>
-                
+        <div>
+            <section id="resumen">
+            <h2>Formulario para procesar pago</h2>
+            <div class="connection"></div>
+            </section>
+        </div>
+        <div>
+            <section id="formPagar">
+            <h2>***solo se recibe pago con tarjeta***</h2>
+            <div class="connection"></div>
+            </section>
+        </div>
+        <div class="payment-container">
+            <div class="paymentDiv">
+                <form id="paymentForm">
+                    <label>
+                    Nombre del titular
+                    <input type="text" id="name">
+                    </label>
+
+                    <label>
+                        Número de tarjeta
+                        <input type="text" id="card">
+                    </label>
+
+                    <label>
+                        Fecha de expiración
+                        <input type="text" id="date" placeholder="MM/AA">
+                    </label>
+
+                    <label>
+                        CVV
+                        <input type="text" id="cvv">
+                    </label>
+                    <button id="btnPagar" class="card-btn">Pagar</button>
+                </form>
             </div>
-        </div>
-        <div>
-            <section id="cables">
-            <h2>CABLEADO DE INTERNET</h2>
-            <div class="connection"></div>
-            </section>
-        </div>
-        <div>
-            <section id="camaras">
-            <h2>CAMARAS DE SEGURIDAD</h2>
-            <div class="connection"></div>
-            </section>
+            <p id="mensajePago"></p>
         </div>
 
-        <div>
-            <section id="hogar">
-            <h2>ACCESORIOS PARA EL HOGAR</h2>
-            <div class="connection"></div>
-            </section>
-        </div>
     </main>
     <footer class="futuristic-footer">
         <div class="footer-content">
@@ -67,7 +75,7 @@
             <p>&copy; 2025 TechCorp. Todos los derechos reservados.</p>
         </div>
     </footer>
-    <script src="../../scripts/catalogo.js"></script>
-    <script src="../../scripts/scripts.js"></script>
+    <script src="../../scripts/pagar.js"></script>
+    
 </body>
 </html>

@@ -28,13 +28,123 @@
       "descripcion": "- velocidad de transmisión 10gb/s - Frecyuencia 10000MHz - Potencia máxima POE 45.4W"
     }
     ,{
-      "id": 1,
+      "id": 4,
       "titulo": "Cable UTP Cat8",
       "precio": 120000,
       "cantidad": 60,
       "categoria": "cables",
       "imagen": "../../images/CableUTPCat8.png",
       "descripcion": "- velocidad de transmisión 100gb/s - Frecyuencia 10000MHz - Potencia máxima POE 75.4W"
+    }
+    ,{
+      "id":5,
+      "titulo": "Cable De Fibra Optica Monomodo",
+      "precio": 24000,
+      "cantidad": 40,
+      "categoria": "cables",
+      "imagen": "../../images/fibraOpticamonomodo.png",
+      "descripcion": "Cable de Fibra Óptica Monomodo LC/LC Duplex 9/125 OS2 de 10 Mtr."
+    }
+    ,{
+      "id": 6,
+      "titulo": "Cable De Fibra Optica Multimodo",
+      "precio": 90000,
+      "cantidad": 35,
+      "categoria": "cables",
+      "imagen": "../../images/fibraOpticamultimodo.png",
+      "descripcion": "Cable de Fibra Óptica Monomodo LC/LC multihilo 5/750 OS4 de 20 Mtr."
+    }
+    ,{
+      "id": 7,
+      "titulo": "Cable de fibra optica dielectrica",
+      "precio": 370000,
+      "cantidad": 100,
+      "categoria": "cables",
+      "imagen": "../../images/dielectrica.png",
+      "descripcion": "- velocidad de transmisión 100gb/s - maxima velocidad  10gb/s a 300 metros - máxima distancia 1gb/s a 1000 metros"
+    }
+    ,{
+      "id": 8,
+      "titulo": "Cable de Fibra Óptica armada",
+      "precio": 1900000,
+      "cantidad": 25,
+      "categoria": "cables",
+      "imagen": "../../images/armada.png",
+      "descripcion": "Máxima velocidad 10gb/s a 300 metros - Máxima distancia 1gb/s a 1000 metros - Reforzada para mayor durabilidad"
+    }
+    ,{
+      "id": 9,
+     "titulo": "Cable Fibra Óptica Auto Soportada sin blindaje",
+      "precio": 550000,
+      "cantidad": 85,
+      "categoria": "cables",
+      "imagen": "../../images/soportada.png",
+      "descripcion": "- Máxima Velocidad 1tb/s a 10 Kilómetros - Máxima distancia 100gb/s a 160 Kilómetros - Sin blindaje"
+    }
+    ,{
+      "id": 10,
+      "titulo": "Cable Fibra Óptica Auto Soportada con blindaje",
+      "precio": 650000,
+      "cantidad": 45,
+      "categoria": "cables",
+      "imagen": "../../images/blindada.png",
+      "descripcion": " -Máxima Velocidad 1tb/s a 10 Kilómetros -Máxima distancia 100gb/s a 160 Kilómetros - Blindaje para mayor durabilidad"
+    }
+    ,{
+      "id": 11,
+      "titulo": "Walkie Talkie",
+      "precio": 64000,
+      "cantidad": 15,
+      "categoria": "hogar",
+      "imagen": "../../images/wk1.png",
+      "descripcion": " - 12 canales de comunicacion - de 1 a 3km - 5 tonos"
+    }
+    ,{
+      "id": 12,
+      "titulo": "Walkie Talkie",
+      "precio": 64000,
+      "cantidad": 15,
+      "categoria": "hogar",
+      "imagen": "../../images/wk2.png",
+      "descripcion": " - 12 canales de comunicacion - de 1 a 3km - 10 tonos"
+    }
+    ,{
+      "id": 13,
+      "titulo": "Walkie Talkie",
+      "precio": 64000,
+      "cantidad": 15,
+      "categoria": "hogar",
+      "imagen": "../../images/wk3.png",
+      "descripcion": " - 12 canales de comunicacion - de 1 a 3km - 10 tonos"
+    }
+    ,{
+      "id": 14,
+      "titulo": "Walkie Talkie",
+      "precio": 125000,
+      "cantidad": 25,
+      "categoria": "hogar",
+      "imagen": "../../images/wk4.png",
+      "descripcion": " - 20 canales de comunicacion incluyendo 1 canal privado - de 3 a 5km - 15 tonos"
+
+    }
+    ,{
+      "id":14,
+      "titulo": "Camara de monitoreo casera",
+      "precio": 85000,
+      "cantidad" : 14,
+      "categoria" : "camaras",
+      "imagen": "../../images/bbcam1.png",
+      "descripcion": "cámara de monitoreo casero de corto alcance con monitor portatil"   
+    }
+    ,{
+      "id":15,
+      "titulo": "Camara de monitoreo casera",
+      "precio": 85000,
+      "cantidad" : 20,
+      "categoria" : "camaras",
+      "imagen": "../../images/bbcam2.png",
+      "descripcion": "cámara de monitoreo casero de corto alcance con monitor portatil"   
+
     }
   ],
   "carrito": [

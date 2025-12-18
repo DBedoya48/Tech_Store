@@ -11,5 +11,18 @@ body {
 }
 
 h1{
-  color:aqua
+  color:rgb(3, 189, 189);
+}
+
+h2{
+  color: variables.$textoImputs;
+}
+
+h3{
+  color: rgb(8, 175, 197);
+}
+
+section{
+  text-align: center;
+  color: variables.$textoImputs;
 }

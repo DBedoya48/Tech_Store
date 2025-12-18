@@ -53,9 +53,10 @@ document.addEventListener("DOMContentLoaded", () => {
                   <button class="card-btn-flip">Ver</button>
                 </div>
                 <div class="tarjPosterior">
+                  <h3 class="card2-title">${p.titulo}</h3>
                   <p>${p.descripcion}</p>
                   <p>Stock: ${p.cantidad}</p>
-                  <p>Categoría: ${p.categoria}</p>
+                  <p></p>
                   <button class="card-btn-flip">Volver</button>
                 </div>
               </div>

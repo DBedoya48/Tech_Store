@@ -45,9 +45,6 @@ function activarAddToCart() {
   });
 }
 
-/* ======================
-   ADD TO CART
-====================== */
 function addToCart(productId, imgElement) {
   let productos = JSON.parse(localStorage.getItem("productos")) || [];
   let carritoLS = JSON.parse(localStorage.getItem("carrito")) || [];
@@ -62,33 +59,35 @@ function addToCart(productId, imgElement) {
   const existente = carritoLS.find(i => i.id === productId);
 
   if (existente) {
-    existente.quantity++;
+    existente.cantidad += 1;
   } else {
     carritoLS.push({
       id: producto.id,
-      name: producto.titulo,
-      price: producto.precio,
-      quantity: 1,
-      imagen: producto.imagen
+      titulo: producto.titulo,
+      precio: producto.precio,
+      cantidad: 1,
+      imagen: producto.imagen,
+      descripcion: producto.descripcion
     });
   }
 
   // 🔥 RESTAR STOCK REAL
   producto.cantidad--;
 
+  // 💾 Guardar cambios
   localStorage.setItem("productos", JSON.stringify(productos));
   localStorage.setItem("carrito", JSON.stringify(carritoLS));
 
+  // ✨ Animación
   flyToCart(imgElement);
 
+  // 🔄 Actualizaciones visuales
   cart = carritoLS;
   updateCart();
-
   actualizarStockVisual(productId, producto.cantidad);
-
-  // 🔄 actualizar catálogo
   renderProductos();
 }
+
 
 /* ======================
    ANIMACIÓN
@@ -138,15 +137,15 @@ function updateCart() {
   cart.forEach(item => {
     const li = document.createElement("li");
     li.innerHTML = `
-      ${item.name} x${item.quantity} - $${item.price * item.quantity}
+      ${item.id} x${item.cantidad} - $${item.precio * item.cantidad}
       <button onclick="removeFromCart(${item.id})">X</button>
     `;
     cartItems.appendChild(li);
   });
 
-  total = cart.reduce((acc, i) => acc + i.price * i.quantity, 0);
+  total = cart.reduce((acc, i) => acc + i.precio * i.cantidad, 0);
   cartTotal.textContent = total;
-  cartCount.textContent = cart.reduce((acc, i) => acc + i.quantity, 0);
+  cartCount.textContent = cart.reduce((acc, i) => acc + i.cantidad, 0);
 }
 
 /* ======================
@@ -162,8 +161,8 @@ function removeFromCart(productId) {
   const producto = productos.find(p => p.id === productId);
   if (producto) producto.cantidad++;
 
-  item.quantity--;
-  if (item.quantity <= 0) {
+  item.cantidad--;
+  if (item.cantidad <= 0) {
     carritoLS = carritoLS.filter(i => i.id !== productId);
   }
 
@@ -240,11 +239,12 @@ form.addEventListener("submit", (e) => {
     window.location.href = "../pages/index.html";
 });
 
-/*function logout() {
+function logout() {
     localStorage.removeItem("sesionActiva");
     window.location.href = "../index.html";
 }
-*/
+
+
 //sript para el saludo en cada pagina
 
 function mostrarSaludo() {
